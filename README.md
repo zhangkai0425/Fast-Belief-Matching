@@ -21,20 +21,19 @@ python decode.py
 The result should be as follows:
 
 ```bash
-syndrome measurement rounds: 5
-p_surface: 0.003
-syndrome ratio: 0.0498
+d: 5, p_surface: 0.003, syndrome measurement rounds: 5
+syndrome ratio: 0.0500
 ###              MWPM Decoding               ###
-Logical Error Rate: 74/10000
-Time: 0.030 s
+Logical Error Rate: 70/10000
+Time: 0.034 s
 ###         Correlated MWPM Decoding         ###
-Logical Error Rate: 40/10000
-Time: 0.086 s
+Logical Error Rate: 43/10000
+Time: 0.095 s
 ###     Belief Matching (single thread)      ###
-Logical Error Rate: 36/10000
-Time: 40.079 s
+Logical Error Rate: 42/10000
+Time: 38.839 s
 ###     Fast Belief Matching (parallel)      ###
-Belief Matching: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:06<00:00,  1.24it/s]
-Logical Error Rate: 36/10000
-Time: 6.588 s
+Belief Matching: 100%|███████████████| 8/8 [00:06<00:00,  1.20it/s]
+Logical Error Rate: 42/10000
+Time: 6.723 s
 ```

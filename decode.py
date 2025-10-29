@@ -19,11 +19,10 @@ if __name__ == "__main__":
     # number of syndrome measurement rounds for one shot
     num_layer = d
     
-    print(f"syndrome measurement rounds: {num_layer}", flush=True)
+    print(f"d: {d}, p_surface: {p_surface}, syndrome measurement rounds: {num_layer}", flush=True)
     circuit = surface_code_circuit(d, num_layer, p_surface)
     sampler = circuit.compile_detector_sampler()
     detector_matrix, actual_observables = sampler.sample(shots=n, separate_observables=True)
-    print(f"p_surface: {p_surface}")
     print(f"syndrome ratio: {np.sum(detector_matrix) / detector_matrix.size:.4f}")
     
     # get the detector error model (Decoding Graph)
